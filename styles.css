@@ -1,0 +1,278 @@
+/* Diseño mobile-first */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  height: 250px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url('./images/areasverdes.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: 90px;
+}
+.navegation {
+  position: sticky;
+      top: 0;
+      z-index: 1000;
+}
+.isoLogo, .isoLogo2 {
+  height: 30px; 
+  margin-left: 20px;
+}
+.isoLogo2 {
+  display: none;
+}
+#lista-proyectos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#lista-proyectos li {
+  background-color: white;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.shadow {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav {
+  background-color: #4CAF50;
+  display: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  position: sticky;
+      top: 38px;
+      z-index: 1000;
+}
+
+
+nav a {
+  display: block;
+  padding: .7rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #45a049;
+}
+
+.hamburger {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+main {
+  margin: 1rem;
+}
+
+h2 {
+  color: #4CAF50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.image1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url('https://blogs.funiber.org/wp-content/uploads/2018/07/funiber-plan-proyectos.jpg');
+}
+.image2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url('https://statics.colsecornoticias.com.ar/2021/12/crop/62c8a53bf39a8__780x420.webp');
+}
+.image3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url('https://www.elconfidencialdigital.com/asset/thumbnail,1280,720,center,center/media/elconfidencialdigital/images/2023/11/16/2023111612375854749.png');
+}
+.image4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url('https://www.revistaareatres.com.ar/files/image/5/5355/62a204950eeaa.jpg');
+}
+.image5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url('https://intconstruccion.com/wp-content/uploads/2016/03/EquipoTe%CC%81cnico-940x380.jpg');
+}
+.image6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url('https://municipioseguro.net/ms/wp-content/uploads/2020/08/municipalidad-perico-800x600.jpg');
+}
+.image { 
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.image p {
+  color: #ffffff;
+  margin-left: 1rem;
+  font-size: 1.3rem;
+}
+.botones-login {
+  min-width: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.shadow p {
+  font-weight: bold;
+  text-align: center;
+}
+
+#login-btn {
+  background-color: #009edb;
+  margin-right: 20px;
+}
+#signin-btn {
+  background-color: #016992;
+}
+.botones-login #login-btn,.botones-login #signin-btn {
+  width: 40%;
+  max-width: 150px;
+}
+header .botones-login #login-btn, header .botones-login #signin-btn {
+  width: 40%;
+  max-width: 100px;
+  font-size: 10px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (min-width:480px) {
+  header {
+      height: 250px;
+  }
+
+  header img {
+    height: 120px;
+  }
+
+  h2 {
+      margin-top: 40px;
+  }
+
+  main {
+      width: 70%; 
+      margin-left: 0;
+  }
+  
+  .contenido {
+      display: flex;
+      margin: 0 2rem;
+  }
+
+  .image p {
+    max-width: 90%;
+  }
+  aside {
+      background-color: #4CAF50;
+      width: 30%;
+      height: 100vh;
+      margin-top: 4rem;
+  }
+}
+
+
+@media (min-width: 980px) {
+  header {
+    height: 300px;
+}
+
+header img {
+  height: 150px;
+}
+.isoLogo{
+  display: none;
+}
+.isoLogo2 {
+  display: block;
+}
+  .hamburger {
+    display: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    top: 0;
+  }
+  h2 {
+    margin-top: 40px;
+  }
+
+  main {
+    width: 70%;
+    margin-left: 0;
+  }
+
+  .contenido {
+    display: flex;
+    margin: 0 2rem;
+  }
+
+  .image p {
+    font-size: 2rem;
+    max-width: 80%;
+}
+
+header .botones-login #login-btn, header .botones-login #signin-btn {
+  width: 40%;
+  max-width: 150px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+  aside {
+    background-color: #4CAF50;
+    width: 30%;
+    height: 100vh;
+    margin-top: 4rem;
+  }
+  
+}

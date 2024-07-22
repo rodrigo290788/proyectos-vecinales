@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión Vecinal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <img src="./images/011.png" alt="">
+    <div>
+      <h1>Sistema de Gestión de Proyectos Vecinales</h1>
+      <div class="botones-login">
+        <button id="login-btn">Iniciar Sesión</button>
+        <button id="signin-btn">Registrarse</button>
+        <button id="logout-btn" style="display:none;">Cerrar sesión</button>
+      </div>
+    </div>
+
+  </header>
+  <div style="background-color: #4CAF50;display: flex; justify-content: space-between; align-items: center;" class="navegation">
+    <img src="./images/BLANCO.png" alt="" class="isoLogo">
+    <button id="hamburger-btn" class="hamburger" aria-label="Menu"
+      style="background-color: #4CAF50; padding: 0 10px 0 0;">
+      &#9776;
+    </button>
+  </div>
+  <nav id="nav-menu">
+    <img src="./images/BLANCO.png" alt="" class="isoLogo2">
+    <a href="#" id="nav-home">Home</a>
+    <a href="#" id="nav-proponer-proyecto">Proponer Proyecto</a>
+    <a href="#" id="nav-proyectos">Proyectos</a>
+    <a href="#" id="nav-recursos">Recursos</a>
+    <a href="#" id="nav-gestion">Gestión</a>
+    <a href="#" id="nav-permisos">Permisos</a>
+    <a href="#" id="nav-distribuidores">Distribuidores</a>
+
+  </nav>
+
+  <div class="contenido">
+    <main>
+      <section id="home">
+        <h2>Bienvenido a la Plataforma de Gestión de Proyectos Vecinales</h2>
+        <p>El objetivo de esta plataforma es proveer la mayor cantidad de recursos para una buena gestión de los centros
+          vecinales. <strong>Aquí puedes:</strong></p>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="image1 image">
+                <p>Proponer nuevos proyectos para mejorar tu comunidad.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image2 image">
+                <p>Votar por proyectos propuestos por otros vecinos.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image3 image">
+                <p>Gestionar los recursos y financiamientos.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image4 image">
+                <p>Acceder a recursos y contactos mayoristas de materiales.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image5 image">
+                <p>Contactar con servicios técnicos en diferentes áreas.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="image6 image">
+                <p>Aprovechar los beneficios que ofrece el municipio.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="shadow">
+          <p><strong>Para acceder al contenido y utilizar los beneficios de esta página necesita iniciar
+              Sesión.</strong></p>
+          <div class="botones-login">
+            <button id="login-btn">Iniciar Sesión</button>
+            <button id="signin-btn">Registrarse</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="proponer-proyecto">
+        <h2>Proponer Proyecto</h2>
+        <form id="form-proyecto">
+          <label for="titulo">Título del Proyecto:</label>
+          <input type="text" id="titulo" name="titulo" maxlength="90"
+            placeholder="Un nombre claro que describa el proyecto." rows="2" required>
+
+          <label for="descripcion-breve">Descripción Breve:</label>
+          <textarea id="descripcion-breve" name="descripcion-breve" maxlength="350"
+            placeholder="Un resumen breve del proyecto (hasta 350 caracteres)." rows="5" required></textarea>
+
+          <label for="ubicacion">Ubicación del Proyecto:</label>
+          <input type="text" id="ubicacion" name="ubicacion" maxlength="100"
+            placeholder="La dirección o zona específica del proyecto." required>
+
+          <label for="descripcion-detallada">Descripción Detallada:</label>
+          <textarea id="descripcion-detallada" name="descripcion-detallada"
+            placeholder="Una explicación más extensa del proyecto, incluyendo los objetivos, beneficios esperados y las actividades que se realizarán."
+            rows="5" required></textarea>
+
+          <label for="financiacion">Modo de Financiación:</label>
+          <input type="text" id="financiacion" name="financiacion"
+            placeholder="Fondos públicos, donaciones, voluntariado, etc.">
+
+          <label for="categoria">Categoría del Proyecto:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Seleccione una categoría</option>
+            <option value="alumbrado">Alumbrado Público</option>
+            <option value="espacios-verdes">Espacios Verdes</option>
+            <option value="seguridad">Seguridad</option>
+            <option value="infraestructura">Infraestructura</option>
+            <option value="educacionYcultura">Educación y Cultura</option>
+            <option value="saludYbienestar">Salud y Bienestar</option>
+            <option value="reciclajeYmedioambiente">Reciclaje y Medio Ambiente</option>
+            <option value="deportesYrecreacion">Deportes y Recreación</option>
+            <option value="tegnologiaYconectividad">Tecnología y Conectividad</option>
+            <option value="economiaYempleo">Economía y Empleo</option>
+            <option value="otros">Otros</option>
+          </select>
+
+          <label for="beneficiarios">Beneficiarios del Proyecto:</label>
+          <input type="text" id="beneficiarios" name="beneficiarios" maxlength="90"
+            placeholder="Niños, ancianos, comunidad en general, etc." required>
+
+          <label for="plazo">Plazo Estimado de Ejecución (opcional):</label>
+          <input type="text" id="plazo" name="plazo" maxlength="90"
+            placeholder="Tiempo estimado para completar el proyecto.">
+
+          <label for="recursos">Recursos Necesarios:</label>
+          <textarea id="recursos" name="recursos"
+            placeholder="Una lista de los recursos necesarios para llevar a cabo el proyecto (materiales, personal, permisos, etc.)."
+            rows="5" required></textarea>
+
+          <label for="justificacion">Justificación del Proyecto:</label>
+          <textarea id="justificacion" name="justificacion"
+            placeholder="Explicación de por qué el proyecto es importante y necesario para la comunidad." rows="3"
+            required></textarea>
+
+          <label for="impacto">Impacto Esperado:</label>
+          <textarea id="impacto" name="impacto"
+            placeholder="Descripción de los cambios positivos que se esperan con la implementación del proyecto."
+            rows="3" required></textarea>
+
+          <label for="imagen">Imagen o Plano del Proyecto (opcional):</label>
+          <input type="file" id="imagen" name="imagen" accept="image/*">
+
+          <button type="submit"
+            style="font-size: 1.5rem; max-width: 400px; width: 100%; margin: 30px auto;">Proponer</button>
+        </form>
+      </section>
+
+      <section id="proyectos" style="display:none;">
+        <h2>Proyectos</h2>
+        <ul id="lista-proyectos"></ul>
+      </section>
+
+      <section id="recursos" style="display:none;">
+        <h2>Recursos</h2>
+        <p>Aquí puedes encontrar recursos útiles para la gestión de proyectos vecinales, incluyendo contactos de
+          mayoristas, técnicos y enlaces a servicios municipales.</p>
+      </section>
+
+      <section id="gestion" style="display:none;">
+        <h2>Gestión</h2>
+        <p>Gestiona los permisos necesarios para los proyectos vecinales, incluyendo solicitudes y aprobaciones.</p>
+      </section>
+      <section id="permisos" style="display:none;">
+        <h2>Permisos</h2>
+        <p>Gestiona los permisos necesarios para los proyectos vecinales, incluyendo solicitudes y aprobaciones.</p>
+      </section>
+
+      <section id="distribuidores" style="display:none;">
+        <h2>Distribuidores</h2>
+        <p>Accede a una lista de distribuidores y mayoristas de materiales y servicios necesarios para tus proyectos.
+        </p>
+      </section>
+    </main>
+    <aside></aside>
+  </div>
+  <script type="module" src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
